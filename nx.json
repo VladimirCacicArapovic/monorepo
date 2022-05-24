@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "app-one",
+  "npmScope": "app-monorepo",
   "affected": {
     "defaultBase": "main"
   },
@@ -46,5 +46,5 @@
       }
     }
   },
-  "defaultProject": "app-one"
+  "defaultProject": "monorepo-app"
 }
