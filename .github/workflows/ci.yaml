@@ -13,5 +13,10 @@ jobs:
         with:
           fetch-depth: 0
       - uses: mansagroup/nrwl-nx-action@v2
-        with:
-          targets: lint,build,deploy
+      - run: npm ci
+
+      - run: npx nx workspace-lint
+      - run: npx nx format:check
+      - run: npx nx affected --target=lint --parallel=3
+      - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
+      - run: npx nx affected --target=build --parallel=3
