@@ -5,6 +5,6 @@
     "monorepo-app-one": "apps/monorepo-app-one",
     "monorepo-app-one-e2e": "apps/monorepo-app-one-e2e",
     "monorepo-app-three": "apps/monorepo-app-three",
-    "monorepo-app-two": "apps/monorepo-app-two",
+    "monorepo-app-two": "apps/monorepo-app-two"
   }
 }
