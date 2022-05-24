@@ -1,2 +1,0 @@
-# monorepo
-POC for Monorepo
