@@ -5,7 +5,7 @@ import NxWelcome from './nx-welcome';
 export function App() {
   return (
     <>
-      <NxWelcome title="first-app" />
+      <NxWelcome title="first-app" /> ONE
       <div />
     </>
   );
