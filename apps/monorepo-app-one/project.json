@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/monorepo-app-one-one/src",
+  "sourceRoot": "apps/monorepo-app-one/src",
   "projectType": "application",
   "targets": {
     "build": {
