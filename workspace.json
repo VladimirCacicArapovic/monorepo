@@ -4,7 +4,7 @@
   "projects": {
     "monorepo-app-one": "apps/monorepo-app-one",
     "monorepo-app-one-e2e": "apps/monorepo-app-one-e2e",
-    "monorepo-app-two": "apps/monorepo-app-one",
+    "monorepo-app-two": "apps/monorepo-app-two",
     "monorepo-app-three": "apps/monorepo-app-three"
   }
 }
