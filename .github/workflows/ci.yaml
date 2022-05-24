@@ -35,5 +35,6 @@ jobs:
           node-version: '14'
       - run: npm install
       - run: npx nx workspace-lint
-      - run: npx nx affected --target=build --parallel --max-parallel=3
-      - run: npx nx affected --target=test --parallel --max-parallel=2
+      - run: npx nx affected --target=lint --parallel=1
+      - run: npx nx affected --target=test --parallel=1 --ci --code-coverage
+      - run: npx nx affected --target=build --parallel=1
