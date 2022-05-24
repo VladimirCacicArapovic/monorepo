@@ -2,7 +2,9 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "monorepo-app": "apps/monorepo-app",
-    "monorepo-app-e2e": "apps/monorepo-app-e2e"
+    "monorepo-app-one": "apps/monorepo-app-one",
+    "monorepo-app-one-e2e": "apps/monorepo-app-one-e2e",
+    "monorepo-app-two": "apps/monorepo-app-one",
+    "monorepo-app-three": "apps/monorepo-app-three"
   }
 }

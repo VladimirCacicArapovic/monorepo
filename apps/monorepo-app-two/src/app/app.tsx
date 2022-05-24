@@ -5,7 +5,7 @@ import NxWelcome from './nx-welcome';
 export function App() {
   return (
     <>
-      <NxWelcome title="monorepo-app" />
+      <NxWelcome title="monorepo-app-two" />
       <div />
     </>
   );

@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/monorepo-app/src",
+  "sourceRoot": "apps/monorepo-app-one-one/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,17 +9,17 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/monorepo-app",
-        "index": "apps/monorepo-app/src/index.html",
+        "outputPath": "dist/apps/monorepo-app-one",
+        "index": "apps/monorepo-app-one/src/index.html",
         "baseHref": "/",
-        "main": "apps/monorepo-app/src/main.tsx",
-        "polyfills": "apps/monorepo-app/src/polyfills.ts",
-        "tsConfig": "apps/monorepo-app/tsconfig.app.json",
+        "main": "apps/monorepo-app-one/src/main.tsx",
+        "polyfills": "apps/monorepo-app-one/src/polyfills.ts",
+        "tsConfig": "apps/monorepo-app-one/tsconfig.app.json",
         "assets": [
-          "apps/monorepo-app/src/favicon.ico",
-          "apps/monorepo-app/src/assets"
+          "apps/monorepo-app-one/src/favicon.ico",
+          "apps/monorepo-app-one/src/assets"
         ],
-        "styles": ["apps/monorepo-app/src/styles.css"],
+        "styles": ["apps/monorepo-app-one/src/styles.css"],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
@@ -33,8 +33,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/monorepo-app/src/environments/environment.ts",
-              "with": "apps/monorepo-app/src/environments/environment.prod.ts"
+              "replace": "apps/monorepo-app-one/src/environments/environment.ts",
+              "with": "apps/monorepo-app-one/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -50,15 +50,15 @@
       "executor": "@nrwl/web:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "monorepo-app:build",
+        "buildTarget": "monorepo-app-one:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "monorepo-app:build:development"
+          "buildTarget": "monorepo-app-one:build:development"
         },
         "production": {
-          "buildTarget": "monorepo-app:build:production",
+          "buildTarget": "monorepo-app-one:build:production",
           "hmr": false
         }
       }
@@ -67,14 +67,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/monorepo-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/monorepo-app-one/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/monorepo-app"],
+      "outputs": ["coverage/apps/monorepo-app-one"],
       "options": {
-        "jestConfig": "apps/monorepo-app/jest.config.ts",
+        "jestConfig": "apps/monorepo-app-one/jest.config.ts",
         "passWithNoTests": true
       }
     }
