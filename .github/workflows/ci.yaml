@@ -1,23 +1,22 @@
-name: Nx Affected CI
+name: CI
 on:
+  push:
+    branches:
+      - main
   pull_request:
-    branches: [main]
+
 jobs:
-  build:
+  main:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: git fetch origin main
-      - run: npm install
-      - name: Run Affected Tests
-        shell: bash
-        run: npm run affected:test -- --base=remotes/origin/main
+      - uses: nrwl/nx-set-shas@v2
+      - run: npm ci
+
+      - run: npx nx workspace-lint
+      - run: npx nx format:check
+      - run: npx nx affected --target=lint --parallel=3
+      - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
+      - run: npx nx affected --target=build --parallel=3
