@@ -8,7 +8,7 @@ export function App() {
 
   return (
     <>
-      <NxWelcome title="second-app"/>
+      <NxWelcome title="second-app2"/>
       <div />
     </>);
 

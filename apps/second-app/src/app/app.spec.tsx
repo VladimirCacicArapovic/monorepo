@@ -15,6 +15,6 @@ describe('App', () => {
     
     const { getByText } = render(<App />);
     
-    expect(getByText(/Welcome second-app/gi)).toBeTruthy();
+    expect(getByText(/Welcome second-app2/gi)).toBeTruthy();
   });
 });
